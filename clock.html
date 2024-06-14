@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時鐘美化作業</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jaro:opsz@6..72&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, hsla(0, 0%, 0%, 0.5) 7em, hsla(0, 0%, 0%, 0.8) 30em), url(https://assets.codepen.io/416221/bricks.jpg);
+            
+        }
+
+        #date {
+            width: 300px;
+            height: 100px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 30px;
+            position: relative;
+            top: -380px;
+            left: 50%;
+
+            font-family: "Verdana", sans-serif;
+            transform: translate(-50%, 50%);
+            border: 0.6rem solid #fff;
+            color: #fff;
+            box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #ff69b4,
+                0 0 0.8rem #ff69b4,
+                0 0 2.5rem #ff69b4,
+                inset 0 0 1.3rem #ff69b4;
+            text-shadow:
+                0 0 5px rgba(255, 105, 180, .1),
+                0 0 10px rgba(255, 105, 180, 1),
+                0 0 20px rgba(255, 105, 180, 1),
+                0 0 40px rgba(255, 105, 180, 1);
+                animation: pulsate 1.5s ease-in-out infinite alternate;
+
+            text-shadow:
+                0 0 5px rgba(247, 245, 41, .1),
+                0 0 10px rgba(247, 245, 41, 1),
+                0 0 20px rgba(247, 245, 41, 1),
+                0 0 40px rgba(247, 245, 41, 1);
+                animation: pulsate 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulsate {
+            0% {
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 10px #fff,
+                    0 0 18px #fff,
+                    0 0 38px rgba(255, 105, 180, 1),
+                    0 0 73px rgba(255, 105, 180, 1),
+                    0 0 80px rgba(255, 105, 180, 1),
+                    0 0 94px rgba(255, 105, 180, 1),
+                    0 0 100px rgba(255, 105, 180, 1);
+            }
+            100% {
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 11px #fff,
+                    0 0 19px #fff,
+                    0 0 40px rgba(255, 20, 147, 1),
+                    0 0 80px rgba(255, 20, 147, 1),
+                    0 0 90px rgba(255, 20, 147, 1),
+                    0 0 100px rgba(255, 20, 147, 1),
+                    0 0 100px rgba(255, 20, 147, 1);
+            }
+        }
+
+        @keyframes pulsate {
+            0% {
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 10px #fff,
+                    0 0 18px #fff,
+                    0 0 38px rgba(255, 105, 180, 1),
+                    0 0 73px rgba(255, 105, 180, 1),
+                    0 0 80px rgba(255, 105, 180, 1),
+                    0 0 94px rgba(255, 105, 180, 1),
+                    0 0 100px rgba(255, 105, 180, 1);
+            }
+            100% {
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 11px #fff,
+                    0 0 19px #fff,
+                    0 0 40px rgba(255, 20, 147, 1),
+                    0 0 80px rgba(255, 20, 147, 1),
+                    0 0 90px rgba(255, 20, 147, 1),
+                    0 0 100px rgba(255, 20, 147, 1),
+                    0 0 100px rgba(255, 20, 147, 1);
+            }
+        }
+
+        #clock {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            position: relative;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            border: 0.6rem solid #fff;
+            box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #1e90ff,
+                0 0 0.8rem #1e90ff,
+                0 0 2.5rem #1e90ff,
+                inset 0 0 1.3rem #1e90ff;
+        }
+
+        #clock::before {
+            content: "";
+            z-index: 5;
+            width: 6%;
+            height: 6%;
+            border-radius: 50%;
+            position: absolute;
+            color: #fff;
+            background: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-34%, -34%);
+            border: 0.3rem solid #fff;
+            box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #1e90ff,
+                0 0 0.8rem #1e90ff,
+                0 0 2.8rem #1e90ff,
+                inset 0 0 1.3rem #1e90ff;
+        }
+
+
+        #clock::after {
+            content: "";
+            z-index: 5;
+            width: 120%;
+            height:120%;
+            border-radius: 50%;
+            position: absolute;
+            color: #fff;
+            /* background: #fff; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 0.3rem solid #fff;
+            box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #1e90ff,
+                0 0 0.8rem #1e90ff,
+                0 0 2.8rem #1e90ff,
+                inset 0 0 1.3rem #1e90ff;
+        }
+
+        #hour {
+            width: 20%;
+            height: 10px;
+            z-index: 2;
+            /* background: skyblue; */
+            position: absolute;
+            left: 30%;
+            top: calc(50% - 5px);
+            border-radius: 10px;
+            transform-origin: right center;
+            border: 0.3rem solid #fff;
+            box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #1e90ff,
+                0 0 0.8rem #1e90ff,
+                0 0 2.8rem #1e90ff,
+                inset 0 0 1.3rem #1e90ff;
+        }
+
+        #minute {
+            z-index: 1;
+            width: 40%;
+            height: 10px;
+            background-color: pink;
+            position: absolute;
+            left: 8%;
+            top: calc(50% - 5px);
+            border-radius: 50px;
+            transform-origin: right center;
+            border: 0.3rem solid #fff;
+            box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #1e90ff,
+                0 0 0.8rem #1e90ff,
+                0 0 2.8rem #1e90ff,
+                inset 0 0 1.3rem #1e90ff;
+        }
+
+        #second {
+            z-index: 3;
+            width: 44%;
+            height: 4px;
+            position: absolute;
+            background: #fff;
+            /* color: #ff0303; */
+            left: 5%;
+            top: calc(50% - 2px);
+
+            transform-origin: right center;
+            border-radius: 50px;
+            border: 0.3rem solid #fff;
+            box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #1e90ff,
+                0 0 0.8rem #1e90ff,
+                0 0 2.8rem #1e90ff,
+                inset 0 0 1.3rem #1e90ff;
+        }
+
+       
+
+        #text {
+            font-size: 50px;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            font-family: 'Kumar One Outline', cursive;
+            color: #fff;
+            text-shadow:
+                0 0 5px rgba(255, 20, 147, .1),
+                0 0 10px rgba(255, 20, 147, 1),
+                0 0 20px rgba(255, 20, 147, 1),
+                0 0 40px rgba(255, 20, 147, 1);
+        }
+
+        #love1 {
+            width: 300px;
+            height: 300px;
+            background: url(./img/9217159.png);
+            background-size: 300px 300px;
+            transform: rotate(20deg);
+            position: absolute;
+            top: 70px;
+            left: 420px;
+
+        }
+
+        #love1:hover {
+            background: url(./img/9217158.png);
+            background-size: 300px 300px
+        }
+
+        #love2 {
+            width: 200px;
+            height: 130px;
+            background: url(./img/02-1.png);
+            background-size: 200px 130px;
+            transform: rotate(0deg);
+            position: absolute;
+            top: 80px;
+            right: 250px;
+            transform: rotate(20deg);
+        }
+
+        #love2:hover {
+            background: url(./img/02.png);
+        }
+       
+        #live{
+            width: 700px;
+            height: 550px;
+            background: url(./img/03.png);
+            background-size: 750px ;
+            /* border: 2px solid #000; */
+            position: absolute;
+            top: 295px;
+            left: 30px;
+            transform: rotate(-10deg);
+        }
+
+        #open{
+            width: 200px;
+            height: 280px;
+            background: url(./img/04.png);
+            background-size: 200px ;
+            /* border: 2px solid #000; */
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            
+        }
+      
+        #star {
+            width: 200px;
+            height: 280px;
+            position: absolute;
+            transform: rotate(-120deg);
+            top: 250px;
+            left: 300px;
+            animation: twinkle 2s infinite;
+        }
+
+       
+
+        #cake{
+            width: 200px;
+            height: 220px;
+            background: url(./img/12-02.png);
+            background-size: 200px ;
+            /* border: 2px solid #000; */
+            position: absolute;
+            top: 200px;
+            right: 480px;
+            transform: rotate(-10deg);
+            
+        }
+
+
+        #cafe{
+            width: 400px;
+            height: 400px;
+            background: url(./img/05-02.png);
+            background-size: 400px ;
+            /* border: 2px solid #000; */
+            position: absolute;
+            top: 400px;
+            right: 100px;
+            transform: rotate(20deg);
+            animation: twinkle 2s infinite;
+        }
+        
+        @keyframes twinkle {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        #smile{
+            width: 200px;
+            height: 200px;
+            background: url(./img/13-02.png);
+            background-size: 200px ;
+            position: absolute;
+            top: 650px;
+            right: 500px;
+            transform: rotate(-30deg);
+        }
+
+    
+        
+    </style>
+</head>
+
+<body>
+    <!-- 時鐘 -->
+    <div id="clock">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+        <div id="o"></div>
+    </div>
+    <!-- 日曆 -->
+    <p id="date"></p>
+
+    <!-- 文字時鐘 -->
+    <p id="text">00:00:00</p>
+
+    <!-- 背景 -->
+    <div id="love1"></div>
+    <div id="love2"></div>
+    <div id="live"></div>
+    <div id="open"></div>
+    <div id="star"><img src="./img/09-02.png" alt=""></div>
+    <div id="cake"></div>
+    <div id="cafe"></div>
+    <div id="smile"></div>
+
+    <!-- <button class="btn btn-primary btn-ghost btn-shine">
+        hover me
+    </button> -->
+    <script>
+        const elHour = document.getElementById('hour')
+        const elMinute = document.getElementById('minute')
+        const elSecond = document.getElementById('second')
+        const elText = document.getElementById('text')
+
+
+        const clock = () => {
+            const date = new Date()
+            const hour = date.getHours()
+            const minute = date.getMinutes()
+            const second = date.getSeconds()
+            elHour.style.transform = `rotate(${hour * 30 + 90}deg)`
+            elMinute.style.transform = `rotate(${minute * 6 + 90}deg)`
+            elSecond.style.transform = `rotate(${second * 6 + 90}deg)`
+            elText.innerText = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`
+        }
+
+        setInterval(clock, 1000)
+        clock()
+
+
+        // 取得今天日期
+        var today = new Date();
+
+        // 將日期格式化為 YYYY-MM-DD 格式
+        var year = today.getFullYear();
+        var month = String(today.getMonth() + 1).padStart(2, '0');
+        var day = String(today.getDate()).padStart(2, '0');
+
+        // 將日期顯示在 id 為 "date" 的元素中
+        document.getElementById("date").innerText = year + "-" + month + "-" + day;
+
+
+    </script>
+</body>
+
+</html>
